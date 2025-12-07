@@ -1,4 +1,4 @@
-MAX_CONCURRENT_THREADS = 1000
+MAX_CONCURRENT_THREADS = 300
 REQUEST_TIMEOUT = 3
 
 import sys
@@ -89,7 +89,7 @@ def main():
         sys.exit(1)
     
     output_file = args.o
-    ip_ranges_url = "https://www.cloudflare-cn.com/ips-v4"
+    ip_ranges_url = "https://www.cloudflare.com/ips-v4"
     
     print(f"正在从 {ip_ranges_url} 获取IP段...")
     ip_ranges = fetch_ip_ranges(ip_ranges_url)
