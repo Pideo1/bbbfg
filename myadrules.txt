@@ -1,0 +1,50 @@
+# 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
+
+## 长虹电视广告相关？
+||huan.tv^
+||gitv.tv^
+
+# 下面这条是之前机圈很火的盗号 zygisk.apk 病毒请求域名
+||fdkss.sbs^
+
+## 123网盘启动时dns请求非123网盘域名
+||tpns.tencent.com^
+||tdid.m.qq.com^
+||tanx.com^
+||volces.com^
+||shunchangzhixing.com^
+||66mobi.com^
+
+# 纯正则表达式，比较激进
+## 顶级域名后缀屏蔽
+/\.ads$/
+/\.bid$/
+/\.biz$/
+/\.click$/
+/\.marketing$/
+/\.promo$/
+
+# 国产浏览器黑名单请求域名
+/browserconf/
+/browserr/
+/^browsercfg/
+
+# 遥测、日志、分析
+/^metric/
+/^log\./
+/^logs/
+/^logger/
+/analytic/
+/stati/
+/^stats.*/
+/^tracking.\/
+/^track\./
+
+# 广告域名部分匹配
+/\.ad\./
+/\.ads\./
+/\.adx\./
+/\.adv\./
+/^ad\./
+/ucweb/
+
