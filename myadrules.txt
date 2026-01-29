@@ -35,7 +35,6 @@
 /^logs/
 /^logger/
 /analytic/
-/stati/
 /^stats.*/
 /^tracking.\/
 /^track\./
