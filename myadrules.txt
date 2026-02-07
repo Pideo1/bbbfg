@@ -4,7 +4,6 @@
 ||huan.tv^
 ||gitv.tv^
 
-
 # 容易被利用于欺诈（其他人那里爬的）
 ||funmart.beanfun.com^
 ||gashpoint.com^
@@ -112,7 +111,7 @@
 /bloomberg/
 /independent/
 /freetibet/
-/citizenpowerfor
+/citizenpowerfor/
 ||rfa.org^
 ||theinitium.com^
 ||tibet.net^
