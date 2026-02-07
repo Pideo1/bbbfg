@@ -33,9 +33,7 @@
 /\.promo$/
 
 # 国产浏览器黑名单请求域名
-/browserconf/
-/browserr/
-/^browsercfg/
+/browser[conf,r,cfg]/
 
 # 遥测、日志、分析
 /^metric/
@@ -49,19 +47,22 @@
 
 # 广告域名部分匹配
 /\.ad\./
-/\.ads\./
-/\.adx\./
-/\.adv\./
+/\.ad[s,v,x]\./
 /^ad\./
-/^adx\./
-/^ads\./
-/^adv\./
+/^ad[s,v,x]\./
+/^ad[s,v,x]/
+/^ads\-/
+/\-ad\-/
+/\-ad/
+/\-ad[s,x,v]\-/
 
 # 其他
 /1rtb\.[com,net]/
 /52qumao\.com/
 /8le8le\.com/
 /adprod\.cn/
+/adkwai/
+/ad[b,u]kwai/
 /aiclk/
 /applk\.cn/
 /bayescom\.com/
@@ -76,7 +77,7 @@
 /maplehaze\.cn/
 /mmstat\.com/
 
-/mobsurl/
+/mob[surl,ads]/
 /mob\.c[o,om,n]/
 /mktad\.cn/
 /oceanengine\.c[n,om]/
