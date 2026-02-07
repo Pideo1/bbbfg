@@ -89,7 +89,7 @@
 /tsyouto\.cn/
 /ubixioe\.com/
 /ucweb/
-/umeng\./
+/umeng/
 /vlion\.c[n,om]/
 /wrating\.com$/
 /xdplt\.com$/
