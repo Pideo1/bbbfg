@@ -38,6 +38,8 @@
 # 遥测、日志、分析
 /^metric/
 /^log\./
+/\.log\./
+/\.logs\./
 /^logs/
 /^logger/
 /analytic/
@@ -64,22 +66,26 @@
 /adkwai/
 /ad[b,u]kwai/
 /aiclk/
+/anythinktech/
 /applk\.cn/
 /bayescom\.com/
+/cnzz\./
 /ctjpqg\.cn/
 /domobcdn\.com/
 /flysleep\.cn/
 /gameley\.com/
-/getui\.net/
+/getui\./
 /gridsumdissector\.c[om,n]/
 /hubcloud\.com\.cn/
 /imageads/
+/jpush\./
 /maplehaze\.cn/
+/midongtech\./
 /mmstat\.com/
-
 /mob[surl,ads]/
 /mob\.c[o,om,n]/
 /mktad\.cn/
+/m\-adnet/
 /oceanengine\.c[n,om]/
 /oneway\.mobi/
 /qchannel0/
@@ -91,6 +97,7 @@
 /ubixioe\.com/
 /ucweb/
 /umeng/
+/unityads/
 /vlion\.c[n,om]/
 /wrating\.com$/
 /xdplt\.com$/
