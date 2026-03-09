@@ -1,0 +1,25 @@
+# 这个是从 https://github.com/lingeringsound/10007/blob/main/all 扒过来的
+# 去除了包含百度、qq的相关域名
+@@||gw.365you.com^
+@@||pgdt.gtimg.cn^
+@@||pgdt.ugdtimg.com^
+@@||pv.sohu.com^
+@@||open.e.kuaishou.com^
+@@||e.kuaishou.com^
+@@||api2.e.kuaishou.com^
+@@||api.e.kuaishou.com^
+@@||log-api.pangolin-sdk-toutiao-b.com^
+@@||log-api.pangolin-sdk-toutiao.com^
+@@||api-access.pangolin-sdk-toutiao.com^
+@@||api-access.pangolin-sdk-toutiao-b.com^
+@@||adsmind.gdtimg.com^
+@@||adx-bj.anythinktech.com^
+@@||adx-bj-req.anythinktech.com^
+@@||dc.sigmob.cn^
+@@||cn-api.anythinktech.com^
+@@||cn-tk.anythinktech.com^
+@@||tk.anythinktech.com^
+@@||adx.anythinktech.com^
+@@||v1-lm.adukwai.com^
+@@||v2-lm.adukwai.com^
+@@||v4-lm.adukwai.com^
