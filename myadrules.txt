@@ -42,6 +42,7 @@
 /\.click$/
 /\.marketing$/
 /\.promo$/
+/\.br$/
 
 # 国产浏览器黑名单请求域名
 /browser[conf,r,cfg]/
