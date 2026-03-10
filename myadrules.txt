@@ -85,6 +85,7 @@
 /anythinktech/
 /applk\.cn/
 /bayescom\.com/
+/cloooud\.com/
 /cnzz\./
 /ctjpqg\.cn/
 /domobcdn\.com/
