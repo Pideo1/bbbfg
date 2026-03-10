@@ -4,6 +4,11 @@
 ||huan.tv^
 ||gitv.tv^
 
+## 4399网页爬取
+||jssdk.3304399.net^
+||4399stat.5054399.com^
+||up.feed.3304399.net^
+
 # 容易被利用于欺诈（其他人那里爬的）
 ||funmart.beanfun.com^
 ||gashpoint.com^
@@ -12,6 +17,12 @@
 ||iosidm.com.cn^
 ||46662.top^
 ||gracebaek.com^
+||iphone.ior.lat^
+
+## 云控
+/api\.sec\..*ui\.com/
+/inf\.miui\./
+## tracking.*.miui.com 与下方/^track\./ 共用
 
 # 下面这条是之前机圈很火的盗号 zygisk.apk 病毒请求域名
 ||fdkss.sbs^
@@ -44,7 +55,7 @@
 /^logger/
 /analytic/
 /^stats.*/
-/^tracking.\/
+/^tracking\./
 /^track\./
 
 # 广告域名部分匹配
@@ -72,9 +83,10 @@
 /cnzz\./
 /ctjpqg\.cn/
 /domobcdn\.com/
+/^e\.so\./
 /flysleep\.cn/
 /gameley\.com/
-/getui\./
+/getui/
 /gridsumdissector\.c[om,n]/
 /hubcloud\.com\.cn/
 /imageads/
@@ -106,7 +118,7 @@
 /zztfly\.com/
 
 
-# i法轮 人士
+## i法轮 人士
 /falun/
 /minghui/
 /epochtimes/
@@ -189,3 +201,51 @@
 ||botanwang.com^
 ||freedomhouse.org^
 ||abc.net.au^
+
+## Fraud
+||deepseek2025.xyz^
+||deepseeklogin.com^
+||deepseekcto.com^
+||deepseek-shares.com^
+||deepseekr3.com^
+||deepseekwin.com^
+||deepseekcto.com^
+||netdeepseek.com^
+||deepseekgod.com^
+||domaindeepseek.com^
+||deepseek-ai-assistant.com^
+||localdeepseek.com^
+||deepseekv3.com^
+||deep-seek-r1.pw^
+||seeksdeeper.com^
+||deepseeky.com^
+||deepseekai.pics^
+||finetunedeepseek.com^
+||deepseekjournal.com^
+||ideepseekai.com^
+||deepseek-chat.vip^
+||discoverdeepseek.com^
+||learndeepseek.org^
+||deepseek.cam^
+||deepseekportfolios.com^
+||deepseeksol.xyz^
+||deepseekmoscow.ru^
+||deepseeknow.xyz^
+||godeepseek.xyz^
+||deepseekspan.com^
+||agideepseek.com^
+||deepseekworkflow.com^
+||openaideepseek.com^
+||deepseek-ai.space^
+||bdeepseek.com^
+||deepseekaiapk.com^
+||deepseek-bank.com^
+||deepseek27.com^
+||deepseekindustry.com^
+||deepseekcoin.net^
+||deepseekpartners.org^
+||aideepseek.se^
+||deepseekasia.online^
+||8deepseek.com^
+||deepseekphone.com^
+||deepseek123.com^
