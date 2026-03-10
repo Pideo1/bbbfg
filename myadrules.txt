@@ -24,9 +24,8 @@
 ||iphone.ior.lat^
 
 ## 云控
-/[upda,set,sec,sys].*miui\.c/
+/[brows,inf,set,sec,sys,upda].*miui\.c/
 /[lg,mistat,pandora].*xiaomi/
-/inf\.miui\./
 /c\.mi\.c/
 
 # 下面这条是之前机圈很火的盗号 zygisk.apk 病毒请求域名
