@@ -64,18 +64,11 @@
 /^track\./
 
 # 广告域名部分匹配
-/\.ad\./
-/\.ad[s,v,x]\./
-/^ad\./
-/^ad[s,v,x]\./
-/^ad[s,v,x]/
-/^ads\-/
-/\-ad\-/
-/\-ad/
-/\-ad[s,x,v]\-/
+/\-(ad|ads|adx|adv)/
+/(^|\.|\-)(ad|ads|adv|adx)(\.|$|\-)/
 
 # 其他
-/1rtb\.[com,net]/
+/1rtb\.(com|net)/
 /52qumao\.com/
 /8le8le\.com/
 /adprod\.cn/
@@ -93,7 +86,7 @@
 /flysleep\.cn/
 /gameley\.com/
 /getui/
-/gridsumdissector\.c[om,n]/
+/gridsumdissector\.(com|cn)/
 /hubcloud\.com\.cn/
 /imageads/
 /jpush\./
@@ -104,7 +97,7 @@
 /mob\.c[o,om,n]/
 /mktad\.cn/
 /m\-adnet/
-/oceanengine\.c[n,om]/
+/oceanengine\.(com|cn)/
 /oneway\.mobi/
 /qchannel0/
 /quminglemei\.com/
@@ -116,10 +109,10 @@
 /ucweb/
 /umeng/
 /unityads/
-/vlion\.c[n,om]/
+/vlion\.(com|cn)/
 /wrating\.com$/
 /xdplt\.com$/
-/yksdks\.c[n,om]/
+/yksdks\.(cn|com)/
 /z74d\.com/
 /zztfly\.com/
 
