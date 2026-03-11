@@ -1,44 +1,28 @@
 [Adblock Plus 2.0]
 # Title: cccc's rules
 # Description: Personal Rules, Aggressive strategy, use with caution
-# 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
 # Update: 2026-03-10 晚上8点，CST
 
-## 长虹电视广告相关？
 ||huan.tv^
 ||gitv.tv^
-
-## 4399网页爬取
 ||jssdk.3304399.net^
 ||4399stat.5054399.com^
 ||up.feed.3304399.net^
-
-# 容易被利用于欺诈（其他人那里爬的）
 ||funmart.beanfun.com^
 ||gashpoint.com^
-
-# 诈骗域名(抖音刷到的)
 ||iosidm.com.cn^
 ||46662.top^
 ||gracebaek.com^
 ||iphone.ior.lat^
-
-## 云控
 /.*(sec|set|sys|browser|upda|inf).*miui\.c.*/
 /.*(lg|mistat|pandora).*xiaomi/
 /c\.mi\.c/
-
-# 下面这条是之前机圈很火的盗号 zygisk.apk 病毒请求域名
 ||fdkss.sbs^
-
-## 123网盘启动时dns请求非123网盘域名
 ||tdid.m.qq.com^
 ||tanx.com^
 ||volces.com^
 ||shunchangzhixing.com^
 ||66mobi.com^
-
-# 纯正则表达式，比较激进
 ## 顶级域名后缀屏蔽
 /\.ads$/
 /\.bid$/
@@ -47,11 +31,7 @@
 /\.marketing$/
 /\.promo$/
 /\.br$/
-
-# 国产浏览器黑名单请求域名
 /browser(conf|r|cfg)\./
-
-# 遥测、日志、分析
 /^metric/
 /^log\./
 /\.log\./
@@ -62,11 +42,8 @@
 /^stats.*/
 /^tracking\./
 /^track\./
-
-# 广告域名部分匹配
 /\-(ad|ads|adx|adv)/
 /(^|\.|\-)(ad|ads|adv|adx)(\.|$|\-)/
-
 # 其他
 /1rtb\.(com|net)/
 /52qumao\.com/
@@ -107,7 +84,6 @@
 /ubixioe\.com/
 /ucweb/
 /umeng/
-/unityads/
 /vlion\.(com|cn)/
 /wrating\.com$/
 /xdplt\.com$/
