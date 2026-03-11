@@ -73,7 +73,7 @@
 /8le8le\.com/
 /adprod\.cn/
 /adkwai/
-/ad[b,u]kwai/
+/ad(b|u)kwai/
 /aiclk/
 /anythinktech/
 /applk\.cn/
