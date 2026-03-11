@@ -49,7 +49,7 @@
 /\.br$/
 
 # 国产浏览器黑名单请求域名
-/browser(conf|r|cfg)/
+/browser(conf|r|cfg)\./
 
 # 遥测、日志、分析
 /^metric/
