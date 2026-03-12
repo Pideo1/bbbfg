@@ -62,7 +62,7 @@
 /^track\./
 
 # 广告域名部分匹配
-/(^|\.|\-)(ad|ads|adv|adx)(\.|$|\-)/
+/(^|\.|\-)(ad|adnet|ads|adv|adx|iad)(\.|$|\-)/
 
 # 其他
 /1rtb\.(com|net)/
