@@ -106,10 +106,10 @@
 /ucweb/
 /umeng/
 /unityads/
-/vlion\.(com|cn)/
+/vlion\.c(om|n)/
 /wrating\.com$/
 /xdplt\.com$/
-/yksdks\.(cn|com)/
+/yksdks\.c(om|n)/
 /z74d\.com/
 /zztfly\.com/
 
