@@ -26,6 +26,7 @@
 /.*(sec|set|sys|browser|upda|inf).*miui\.c.*/
 /.*(lg|mistat|pandora).*xiaomi/
 /c\.mi\.c/
+/stsdk\.vivo/
 
 ## 反诈
 /(mps\.gov|gjfzpt)\.cn$/
