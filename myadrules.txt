@@ -55,9 +55,6 @@
 /browser(conf|r|cfg)\./
 
 # 遥测、日志、分析
-/^log\./
-/\.log\./
-/\.logs\./
 /^logs/
 /^logger/
 /analytic/
@@ -66,7 +63,7 @@
 /^track\./
 
 # 广告域名部分匹配
-/(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|metrics|metric)(\.|$|\-)/
+/(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|log|logs|metrics|metric)(\.|$|\-)/
 /^adser.*/
 
 # 其他
