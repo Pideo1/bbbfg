@@ -29,7 +29,7 @@
 /stsdk\.vivo/
 
 ## 反诈
-/(mps\.gov|gjfzpt)\.cn$/
+/(miit\.gov|mps\.gov|gjfzpt)\.cn$/
 
 
 # 下面这条是之前机圈很火的盗号 zygisk.apk 病毒请求域名
