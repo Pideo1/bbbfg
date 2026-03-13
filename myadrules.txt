@@ -27,6 +27,10 @@
 /.*(lg|mistat|pandora).*xiaomi/
 /c\.mi\.c/
 
+## 反诈
+/(mps\.gov|gjfzpt)\.cn$/
+
+
 # 下面这条是之前机圈很火的盗号 zygisk.apk 病毒请求域名
 ||fdkss.sbs^
 
