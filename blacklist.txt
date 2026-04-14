@@ -1,4 +1,4 @@
-(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|log|logs|metrics|metric|cloudconf)(\.|$|\-)
+(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|biz|uve|iad|log|logs|metrics|metric|cloudconf)(\.|$|\-)
 ^logs\.
 (huan|gitv)\.tv$
 (miit\.gov|mps\.gov|gjfzpt)\.cn$
@@ -32,6 +32,7 @@ gameley\.com
 getui
 gridsumdissector\.c(om|n)
 hubcloud\.com\.cn
+igexin
 imageads
 jpush\.
 maplehaze\.cn
@@ -58,3 +59,9 @@ xdplt\.com$
 yksdks\.c(om|n)
 z74d\.com
 zztfly\.com
+gxh\.material\.qq\.com
+world\.qpic\.cn
+(iv6|tianshu|minigame)\.gtimg\.cn
+wx(a|snsdythumb|snsdy|img|smw)\.wxs\.
+badjs\.weixinbridge\.com
+(channels|bc|dnstest|dns|aedns)\.weixin\.
