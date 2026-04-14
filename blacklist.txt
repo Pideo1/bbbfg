@@ -30,6 +30,7 @@ cloooud\.com
 cnzz\.
 ctjpqg\.cn
 domobcdn\.com
+doubleclick
 ^e\.so\.
 flysleep\.cn
 gameley\.com
