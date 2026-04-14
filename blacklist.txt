@@ -1,6 +1,5 @@
 # 这是一个注释
-(^|\.|\-)(ad|adnet|ads|adsdk|adtech|adv|adx|biz|cloudconf|doubleclick|iad|log|logs|metrics|metric|uve)(\.|$|\-)
-^logs\.
+(^|\.|\-)(ad|adnet|ads|adsdk|adtech|adv|adx|biz|bugsnag|cloudconf|doubleclick|googleanalytics|google\-analytics|iad|log|logs|metrics|metric|uve)(\.|$|\-)
 (huan|gitv)\.tv$
 (miit\.gov|mps\.gov|gjfzpt)\.cn$
 # 域名后缀屏蔽名单
@@ -18,20 +17,24 @@
 # 其他
 1rtb\.(com|net)
 52qumao\.com
+66mobi\.com
 8le8le\.com
 adprod\.cn
 adkwai
 ad(b|u)kwai
 aiclk
+allawntech\.com
 anythinktech
 applk\.cn
 bayescom\.com
+bytescm\.com
 cloooud\.com
 cnzz\.
 ctjpqg\.cn
 domobcdn\.com
 ^e\.so\.
 flysleep\.cn
+fundingchoicesmessages.google.com
 gameley\.com
 getui
 gridsumdissector\.c(om|n)
@@ -39,6 +42,7 @@ hubcloud\.com\.cn
 igexin
 imageads
 jpush\.
+l(on|cy).llnw.net
 maplehaze\.cn
 midongtech\.
 mmstat\.com
@@ -58,11 +62,15 @@ ucweb
 umeng
 unityads
 vlion\.c(om|n)
+wns.windows.com
 wrating\.com$
 xdplt\.com$
 yksdks\.c(om|n)
 z74d\.com
 zztfly\.com
+
+#李彦宏你妈死了
+(hm|pos|cpro|eclick|crs|union)\.baidu
 
 # 其他地方扒的，屏蔽微信、qq里的广告
 gxh\.material\.qq\.com
