@@ -1,6 +1,4 @@
-^ads\.
-^ad\.
-^adx\.
+/(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|log|logs|metrics|metric)(\.|$|\-)/
 ^logs\.
 (huan|gitv)\.tv$
 (miit\.gov|mps\.gov|gjfzpt)\.cn$
@@ -10,7 +8,6 @@
 \.marketing$
 \.promo$
 \.br$
-^logs
 ^logger
 ^tracking\.
 ^track\.
