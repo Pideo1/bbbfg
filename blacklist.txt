@@ -1,4 +1,4 @@
-(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|log|logs|metrics|metric)(\.|$|\-)
+(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|log|logs|metrics|metric|cloudconf)(\.|$|\-)
 ^logs\.
 (huan|gitv)\.tv$
 (miit\.gov|mps\.gov|gjfzpt)\.cn$
