@@ -2,3 +2,15 @@
 ^ad\.
 ^adx\.
 ^logs\.
+(huan|gitv)\.tv$
+(miit\.gov|mps\.gov|gjfzpt)\.cn$
+\.bid$
+\.biz$
+\.click$
+\.marketing$
+\.promo$
+\.br$
+^logs
+^logger
+^tracking\.
+^track\.
