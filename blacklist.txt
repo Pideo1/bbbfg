@@ -1,5 +1,5 @@
 # 这是一个注释
-(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|biz|uve|iad|log|logs|metrics|metric|cloudconf)(\.|$|\-)
+(^|\.|\-)(ad|adnet|ads|adsdk|adtech|adv|adx|biz|cloudconf|doubleclick|iad|log|logs|metrics|metric|uve)(\.|$|\-)
 ^logs\.
 (huan|gitv)\.tv$
 (miit\.gov|mps\.gov|gjfzpt)\.cn$
@@ -30,7 +30,6 @@ cloooud\.com
 cnzz\.
 ctjpqg\.cn
 domobcdn\.com
-doubleclick
 ^e\.so\.
 flysleep\.cn
 gameley\.com
