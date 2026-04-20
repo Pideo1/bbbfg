@@ -99,7 +99,7 @@ print(f"正在处理网段去重 (共 {len(ipv4_pool)} 个网段)...")
 
 for subnet, ips in ipv4_pool.items():
     # 每个网段随机选 2 个
-    selected_ips = random.sample(list(ips), min(len(ips), 2))
+    selected_ips = random.sample(list(ips), min(len(ips), 1))
     
     for ip in selected_ips:
         try:
