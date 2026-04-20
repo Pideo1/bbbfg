@@ -107,7 +107,7 @@ for subnet, ips in ipv4_pool.items():
             resp = requests.get(f"{base_url}/{ip}/{path}", timeout=5)
             location = resp.text.strip() or "Unknown"
             
-            ip_with_port = f"{ip}:{PORT}"
+            ip_with_port = f"{ip}"
             comment = f"{location}-{myID.uuid4().hex[27:]}{str(random.randint(0,10))}"
             ipv4_dict[ip_with_port] = comment
         except:
