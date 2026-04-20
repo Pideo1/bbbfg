@@ -79,3 +79,7 @@ world\.qpic\.cn
 wx(a|snsdythumb|snsdy|img|smw)\.wxs\.
 badjs\.weixinbridge\.com
 (channels|bc|dnstest|dns|aedns)\.weixin\.
+
+# x.com 的曰鸡巴域名
+shbkzkk\.cn
+[a-z0-9]{4}\.top
