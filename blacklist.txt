@@ -1,7 +1,7 @@
 # 这是一个注释
 (^|\.|\-)(ad|adnet|ads|adsdk|adtech|adv|adx|biz|bugsnag|cloudconf|doubleclick|googleanalytics|google\-analytics|iad|log|logs|metrics|metric|uve)(\.|$|\-)
 (huan|gitv)\.tv$
-(miit\.gov|mps\.gov|gjfzpt)\.cn$
+(mps\.gov|gjfzpt)\.cn$
 # 域名后缀屏蔽名单
 \.bid$
 \.biz$
