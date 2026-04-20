@@ -14,6 +14,8 @@
 ^tracking\.
 ^track\.
 ^adser.*
+# 狗屎💩💩💩
+ping0\.cc
 # 其他
 1rtb\.(com|net)
 52qumao\.com
@@ -68,10 +70,8 @@ xdplt\.com$
 yksdks\.c(om|n)
 z74d\.com
 zztfly\.com
-
 #李彦宏你妈死了
 (hm|pos|cpro|eclick|crs|union)\.baidu
-
 # 其他地方扒的，屏蔽微信、qq里的广告
 gxh\.material\.qq\.com
 world\.qpic\.cn
