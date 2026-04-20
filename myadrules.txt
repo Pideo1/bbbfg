@@ -21,6 +21,8 @@
 ||46662.top^
 ||gracebaek.com^
 ||iphone.ior.lat^
+/[a-zA-Z0-9]{4}\.top/
+/shbkzkk\.cn/
 
 ## 云控
 /.*(sec|set|sys|browser|upda|inf).*miui\.c.*/
