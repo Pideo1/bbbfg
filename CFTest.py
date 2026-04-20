@@ -1,180 +1,105 @@
-MAX_CONCURRENT_THREADS = 300
-REQUEST_TIMEOUT = 3
+import requests, re, os, ipaddress, random, uuid
+from bs4 import BeautifulSoup
+from datetime import datetime, timedelta
+myID = uuid
 
-import sys
-import requests
-import ipaddress
-from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
-import threading
-import argparse
-from collections import defaultdict
+# ✅ URL源与简称
+sources = {
+    'https://api.uouin.com/cloudflare.html': 'Uouin',
+    'https://ip.164746.xyz': 'ZXW',
+    'https://ipdb.api.030101.xyz/?type=bestcf': 'IPDB',
+    'https://www.wetest.vip/page/cloudflare/address_v6.html': 'WeTestV6',
+    'https://ipdb.api.030101.xyz/?type=bestcfv6': 'IPDBv6',
+    'https://cf.090227.xyz/CloudFlareYes': 'CFYes',
+    'https://ip.haogege.xyz': 'HaoGG',
+    'https://vps789.com/openApi/cfIpApi': 'VPS',
+    'https://www.wetest.vip/page/cloudflare/address_v4.html': 'WeTest',
+    'https://addressesapi.090227.xyz/ct': 'CMLiuss',
+    'https://addressesapi.090227.xyz/cmcc-ipv6': 'CMLiussv6',
+    'https://raw.githubusercontent.com/xingpingcn/enhanced-FaaS-in-China/refs/heads/main/Cf.json': 'FaaS'
+}
 
-def fetch_ip_ranges(url):
-    """从指定URL获取IP段列表"""
+PORT = '443'  # 目标端口号
+
+# 正则表达式
+ipv4_pattern = r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b'
+ipv6_candidate_pattern = r'([a-fA-F0-9:]{2,39})'
+base_url = "https://ipinfo.io"
+path = "country"
+
+headers = {
+    'User-Agent': 'Mozilla/5.0'
+}
+
+# 删除旧文件
+#for file in ['output.txt', 'ipv6.txt']:
+for file in ['output.txt']:
+    if os.path.exists(file):
+        os.remove(file)
+
+# IP 分类存储
+ipv4_dict = {}
+ipv6_dict = {}
+
+# 当前时间
+utctimestamp = datetime.now().strftime('%Y%m%d%H%M')
+beijing_time = datetime.utcnow() + timedelta(hours=8)
+now_str = beijing_time.strftime('%Y-%m-%d_%H:%M')
+timestamp = beijing_time.strftime('%Y%m%d_%H:%M')
+
+# 遍历来源
+for url, shortname in sources.items():
     try:
-        response = requests.get(url, timeout=10)
+        response = requests.get(url, headers=headers, timeout=10)
         response.raise_for_status()
-        
-        ip_ranges = []
-        for line in response.text.splitlines():
-            line = line.strip()
-            if line:
-                ip_ranges.append(line)
-                
-        return ip_ranges
-    except Exception as e:
-        print(f"获取IP段失败: {e}")
-        sys.exit(1)
+        content = response.text
 
-def expand_ip_range(ip_range):
-    """将IP段扩展为具体的所有IP地址列表"""
-    try:
-        network = ipaddress.ip_network(ip_range, strict=True)
-        return [str(ip) for ip in network]
-            
-    except ValueError as e:
-        print(f"解析IP段 {ip_range} 失败: {e}")
-        return []
-
-def check_ip_location(ip, target_colos, stop_event):
-    """检查IP是否连通，返回IP和对应的三字码（支持多地区筛选）"""
-    if stop_event.is_set():
-        return None
-        
-    try:
-        ipaddress.IPv4Address(ip)
-    except ValueError:
-        print(f"无效的IP地址: {ip}")
-        return None
-        
-    url = f"http://{ip}/cdn-cgi/trace"
-    try:
-        if stop_event.is_set():
-            return None
-            
-        response = requests.get(url, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()
-        
-        # 提取三字码
-        colo = None
-        for line in response.text.splitlines():
-            if line.startswith('colo='):
-                colo = line.split('=')[1].strip()
-                break
-                
-        # 验证目标机场码（支持多个目标）
-        if target_colos and colo not in target_colos:
-            return None
-                
-        return (ip, colo) if colo else None
-    except Exception:
-        return None
-
-def main():
-    # 解析命令行参数（支持多个地区参数）
-    parser = argparse.ArgumentParser(description='CFTest')
-    parser.add_argument('-d', nargs='+', help='机场三字码 (可选, 可指定多个, 不填则匹配所有可连通IP)')
-    parser.add_argument('-i', type=int, default=10, help='测试数量, 默认10个')
-    parser.add_argument('-o', default='output.txt', help='输出文件名, 默认output.txt')
-    args = parser.parse_args()
-
-    # 处理多个地区参数（转为大写）
-    target_colos = [col.upper() for col in args.d] if args.d else None
-    try:
-        max_count = args.i
-        if max_count <= 0:
-            raise ValueError("最大数量必须为正数")
-    except ValueError as e:
-        print(f"无效的最大数量: {e}")
-        sys.exit(1)
-    
-    output_file = args.o
-    ip_ranges_url = "https://www.cloudflare.com/ips-v4"
-    
-    print(f"正在从 {ip_ranges_url} 获取IP段...")
-    ip_ranges = fetch_ip_ranges(ip_ranges_url)
-    print(f"成功获取 {len(ip_ranges)} 个IP段")
-    
-    print("正在扩展IP段...")
-    all_ips = []
-    for range_str in ip_ranges:
-        ips = expand_ip_range(range_str)
-        all_ips.extend(ips)
-        print(f"  从 {range_str} 扩展出 {len(ips)} 个IP")
-    
-    all_ips = list(set(all_ips))
-    # 调整搜索模式描述（支持多地区显示）
-    if target_colos:
-        search_mode = f"属于 {', '.join(target_colos)} 的IP"
-    else:
-        search_mode = "可连通的IP"
-    print(f"共扩展出 {len(all_ips)} 个唯一IP地址，正在检查每个IP...")
-    print(f"找到 {max_count} 个{search_mode}后将停止搜索")
-    
-    stop_event = threading.Event()
-    max_workers = min(MAX_CONCURRENT_THREADS, len(all_ips))
-    
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = []
-        for ip in all_ips:
-            # 传入多个目标地区
-            future = executor.submit(check_ip_location, ip, target_colos, stop_event)
-            futures.append(future)
-        
-        total = len(futures)
-        completed = 0
-        matched_results = []  # 存储(IP, 三字码)元组
-        
-        while completed < total and len(matched_results) < max_count:
-            done, not_done = wait(futures, return_when=FIRST_COMPLETED)
-            
-            for future in done:
-                if future in futures:
-                    futures.remove(future)
-                    completed += 1
-                    
-                    result = future.result()
-                    if result:
-                        matched_results.append(result)
-                        print(f"已找到 {len(matched_results)}/{max_count} 个{search_mode}")
-                        
-                        if len(matched_results) >= max_count:
-                            print(f"\n已找到 {max_count} 个{search_mode}，停止搜索")
-                            stop_event.set()
-                            for f in futures:
-                                f.cancel()
-                            break
-            
-            if stop_event.is_set():
-                break
-            
-            if completed % 50 == 0 or completed == total:
-                print(f"进度: {completed}/{total} ({(completed/total)*100:.1f}%)，已找到 {len(matched_results)} 个{search_mode}")
-    
-    if len(matched_results) > max_count:
-        matched_results = matched_results[:max_count]
-    
-    # 按IP地址排序
-    matched_results.sort(key=lambda x: ipaddress.IPv4Address(x[0]))
-    
-    # 写入文件（根据是否指定-d参数使用不同格式）
-    with open(output_file, 'w') as f:
-        if target_colos:
-            # 按三字码分组并计数（指定-d时保留原格式）
-            colo_groups = defaultdict(list)
-            for ip, colo in matched_results:
-                colo_groups[colo].append(ip)
-            # 按三字码字母顺序排序
-            for colo in sorted(colo_groups.keys()):
-                ips = colo_groups[colo]
-                for idx, ip in enumerate(ips, 1):
-                    f.write(f"{ip}#{colo} {idx}\n")
+        if url.endswith('.txt'):
+            text = content
         else:
-            # 不指定-d时使用"IP#优选IP 序号"格式
-            for idx, (ip, _) in enumerate(matched_results, 1):
-                f.write(f"{ip}#优选IP {idx}\n")
-    
-    print(f"完成！共找到 {len(matched_results)} 个{search_mode}，已保存到 {output_file}")
+            soup = BeautifulSoup(content, 'html.parser')
+            elements = soup.find_all('tr') or soup.find_all('li') or soup
+            text = '\n'.join(el.get_text() for el in elements)
 
-if __name__ == "__main__":  # 补充主程序入口判断
-    main()
+        # IPv4 提取
+        for ip in re.findall(ipv4_pattern, text):
+            try:
+                if ipaddress.ip_address(ip).version == 4:                    
+                    response = requests.get(f"{base_url}/{ip}/{path}")
+                    location = response.text.strip('\n')
+                    ip_with_port = f"{ip}:{PORT}"
+                    comment = f"{location}-{myID.uuid4().hex[27:]}{str(random.randint(0,10))}"
+                    ipv4_dict[ip_with_port] = comment
+            except ValueError:
+                continue
+
+        # IPv6 提取
+        for ip in re.findall(ipv6_candidate_pattern, text):
+            try:
+                ip_obj = ipaddress.ip_address(ip)
+                if ip_obj.version == 6:
+                    ip_with_port = f"[{ip_obj.compressed}]:{PORT}"
+                    comment = f"{shortname}-{myID.uuid4().hex[27:]}{str(random.randint(0,10))}"
+                    ipv6_dict[ip_with_port] = comment
+            except ValueError:
+                continue
+
+    except requests.RequestException as e:
+        print(f"[请求错误] {url} -> {e}")
+    except Exception as e:
+        print(f"[解析错误] {url} -> {e}")
+
+# 写入 ipv4.txt（仅IPv4）
+with open('output.txt', 'w') as f4:
+    f4.write(f"ipv4.list.updated.at#Upd{timestamp}\n")
+    for ip in sorted(ipv4_dict):
+        f4.write(f"{ip}#{ipv4_dict[ip]}\n")
+
+# 写入 ipv6.txt（仅IPv6）
+with open('ipv6.txt', 'w') as f6:
+    f6.write(f"ipv6.list.updated.at#Upd{timestamp}\n")
+    for ip in sorted(ipv6_dict):
+        f6.write(f"{ip}#{ipv6_dict[ip]}\n")
+
+print(f"✅ IPv4 写入 output.txt，共 {len(ipv4_dict)} 个")
+# print(f"✅ IPv6 写入 ipv6.txt，共 {len(ipv6_dict)} 个")
