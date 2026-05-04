@@ -65,7 +65,7 @@
 /^track\./
 
 # 广告域名部分匹配
-/(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|log|logs|metrics|metric)(\.|$|\-)/
+/(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|log|logs|metrics|metric|telemetry)(\.|$|\-)/
 /^adser.*/
 
 # 其他
