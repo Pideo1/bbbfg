@@ -67,11 +67,12 @@
 # 迅雷
 /xunlei\./
 # 广告域名部分匹配
-/(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|iad|log|logs|metrics|metric|pcdn|p2p|telemetry)(\.|$|\-)/
+/(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|click|iad|log|logs|metrics|metric|pcdn|p2p|telemetry)(\.|$|\-)/
 /^adser.*/
 
 # 其他
 /1rtb\.(com|net)/
+/51\.la/
 /52qumao\.com/
 /8le8le\.com/
 /adprod\.cn/
@@ -84,7 +85,6 @@
 /chengzijianzhana、.com/
 /cloooud\.com/
 /cnzz\./
-
 /ctjpqg\.cn/
 /domobcdn\.com/
 /^e\.so\./
@@ -94,6 +94,7 @@
 /gridsumdissector\.c(om|n)/
 /.(heytap|oneplus|oppo|realme)mob(i|ile)\./
 /hubcloud\.com\.cn/
+/igexin/
 /imageads/
 /jpush\./
 /maplehaze\.cn/
