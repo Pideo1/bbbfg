@@ -39,6 +39,7 @@ flysleep\.cn
 fundingchoicesmessages.google.com
 gameley\.com
 getui
+gn\-cn
 gridsumdissector\.c(om|n)
 hubcloud\.com\.cn
 igexin
