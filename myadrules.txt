@@ -64,8 +64,6 @@
 /^tracking\./
 /^track\./
 
-# 迅雷
-/xunlei\./
 # 广告域名部分匹配
 /(^|\.|\-)(ad|adnet|ads|adsdk|adv|adx|click|iad|log|logs|metrics|metric|pcdn|p2p|telemetry)(\.|$|\-)/
 /^adser.*/
