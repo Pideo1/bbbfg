@@ -7,9 +7,13 @@
 ## 电视广告相关？
 /(huan|gitv)\.tv$/
 ## 乐播没母
-/play\-cdn9/
+||ap-guangzhou.cls.tencentcs.com^
+/\.cibn\./
+/\.cibntv\./
 /hpplay\./
+/\.kkapp\./
 /\.lebo\./
+/play\-cdn9/
 
 ## 4399网页爬取
 ||jssdk.3304399.net^
