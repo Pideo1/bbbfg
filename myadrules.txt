@@ -4,8 +4,12 @@
 # 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
 # Update: 2026年 05月 17日 星期日 09:14:11 HKT
 
-## 长虹电视广告相关？
+## 电视广告相关？
 /(huan|gitv)\.tv$/
+## 乐播没母
+/play\-cdn9/
+/hpplay\./
+/\.lebo\./
 
 ## 4399网页爬取
 ||jssdk.3304399.net^
@@ -110,6 +114,7 @@
 /shuzilm/
 /tingyun\.com$/
 /tsyouto\.cn/
+/ttwebview\./
 /ubixioe\.com/
 /ucweb/
 /umeng/
@@ -117,11 +122,18 @@
 /vlion\.c(om|n)/
 /wanyol\.c/
 /wrating\.com$/
+/wuchuyun\./
 /xdplt\.com$/
+/ydycdn\./
 /yksdks\.c(om|n)/
 /z74d\.com/
 /zztfly\.com/
 
+## 字节跳动
+||i.snssdk.com^
+||sf3-ttcdn-tos.pstatp.com^
+/chengzijianzhan\.com|www\.toutiaopages\.com/
+||im-open.douyin.com^
 
 ## i法轮 人士
 /falun/
