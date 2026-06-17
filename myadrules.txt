@@ -7,6 +7,8 @@
 ## 电视广告相关？
 /(huan|gitv)\.tv$/
 ||mymlsoft.com^
+||z.cjjd14.com^
+||comfylink.com^
 
 ## 乐播没母
 ||ap-guangzhou.cls.tencentcs.com^
