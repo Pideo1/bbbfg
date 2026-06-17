@@ -4,6 +4,9 @@
 # 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
 # Update: 2026年 05月 17日 星期日 09:14:11 HKT
 
+## 白名单
+@@||h5no1.com^
+
 ## 电视广告相关？
 /(huan|gitv)\.tv$/
 ## 乐播没母
