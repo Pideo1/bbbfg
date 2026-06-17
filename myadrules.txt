@@ -2,10 +2,12 @@
 # Title: cccc's rules
 # Description: Personal Rules, Aggressive strategy, use with caution
 # 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
-# Update: 2026年 05月 17日 星期日 09:14:11 HKT
+# Update: 2026年 06月 17日 星期三 21:39:41 HKT
 
 ## 电视广告相关？
 /(huan|gitv)\.tv$/
+||mymlsoft.com^
+
 ## 乐播没母
 ||ap-guangzhou.cls.tencentcs.com^
 /\.cibn\./
@@ -129,6 +131,7 @@
 /wuchuyun\./
 /xdplt\.com$/
 /ydycdn\./
+/yingt\.fun/
 /yksdks\.c(om|n)/
 /z74d\.com/
 /zztfly\.com/
