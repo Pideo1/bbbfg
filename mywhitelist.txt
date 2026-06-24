@@ -1,4 +1,5 @@
-# 这个是从 https://github.com/lingeringsound/10007/blob/main/all 扒过来的
-
 ## 南方基金
 @@||h5no1.com^
+
+## Tailscale
+@@||log.tailscale.com^
