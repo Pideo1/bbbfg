@@ -129,7 +129,6 @@
 /quminglemei\.com/
 /shuzilm/
 /skarb\.(club|work)/
-/sm\.c/
 /tingyun\.com$/
 /tsyouto\.cn/
 /ttwebview\./
