@@ -10,6 +10,12 @@
 ||z.cjjd14.com^
 ||comfylink.com^
 
+## 让我联想一下
+/hao\.lenovo/
+/sams\.lenovo/
+/tbcloud\-test\.lenovo/
+/lenovows/
+
 ## 乐播没母
 ||ap-guangzhou.cls.tencentcs.com^
 /\.cibn\./
