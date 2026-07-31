@@ -1,5 +1,14 @@
 ## 南方基金
 @@||h5no1.com^
+@@||sysdk.cl2009.com^
 
 ## Tailscale
 @@||log.tailscale.com^
+
+## 网易游戏更新
+@@||update.netease.com^
+
+## oppo 部分误杀
+@@||realme-ai-cn.allawntech.com^
+@@||weather-api-cn.allawntech.com^
+@@||weather-server.allawntech.com^
