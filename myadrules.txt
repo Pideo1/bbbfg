@@ -58,7 +58,6 @@
 ## 123网盘启动时dns请求非123网盘域名
 ||tdid.m.qq.com^
 ||tanx.com^
-||volces.com^
 ||shunchangzhixing.com^
 ||66mobi.com^
 
