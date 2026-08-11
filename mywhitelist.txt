@@ -16,6 +16,7 @@
 @@||aitool-gateway-cn.allawntech.com^
 @@||calculator-api-cn.allawntech.com^
 @@||translate-service-cn.allawntech.com^
+@@||odin-inference-cn.allawntech.com^
 
 ## vivo 部分放行
 @@||connectivitycheck.vivo.com.cn^
