@@ -2,7 +2,7 @@
 # Title: cccc's rules
 # Description: Personal Rules, Aggressive strategy, use with caution
 # 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
-# Update: 2026年 06月 17日 星期三 21:39:41 HKT
+# Update: 2026年 08月 12日 星期三 16:17:18 HKT
 
 ## 电视广告相关？
 /(huan|gitv)\.tv$/
@@ -85,6 +85,25 @@
 /(^|\.|\-)(ad|admobile|adnet|ads|adscope|adsdk|adstrategy|adv|adx|beizi|click|iad|log|logs|lydaas|lydass|metrics|metric|pcdn|p2p|telemetry)(\.|$|\-)/
 /^adser.*/
 /advert/
+
+# oppo
+||realmebbs.com^
+||finzfin.com^
+||ioppo.net^
+||myoppo.com^
+||oneplusbbs.com^
+||opdwz.cn^
+/oppo\./
+/coloros\./
+/heytap/
+/realme\./
+/oppo(coloros|mobile|pay|shop|work|color|er|digital)\./
+/allawn(fs|o|os|tech)\./
+/(oneplus|realme)mobile\./
+||opstatics.com^
+/oneplus\./
+||nearme.com.cn^
+
 
 # 其他
 /^e\.so\./
