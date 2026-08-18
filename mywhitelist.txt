@@ -17,6 +17,7 @@
 @@||calculator-api-cn.allawntech.com^
 @@||translate-service-cn.allawntech.com^
 @@||odin-inference-cn.allawntech.com^
+@@||tel-num-cn.heytapmobi.com^
 
 ## vivo 部分放行
 @@||connectivitycheck.vivo.com.cn^
