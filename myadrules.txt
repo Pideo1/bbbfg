@@ -4,6 +4,33 @@
 # 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
 # Update: 2026年 08月 12日 星期三 16:17:18 HKT
 
+#============================白名单开始===========================
+## 南方基金
+@@||h5no1.com^
+@@||sysdk.cl2009.com^
+
+## Tailscale
+@@||log.tailscale.com^
+
+## 网易游戏更新
+@@||update.netease.com^
+
+## oppo 部分放行，放行原因就是域名字面意思（相册的ai编辑功能、天气服务、日历节假日、录音软件里的ai工具、计算器软件等）
+@@||realme-ai-cn.allawntech.com^
+@@||weather-api-cn.allawntech.com^
+@@||weather-server.allawntech.com^
+@@||calendar-ext-cn.allawntech.com^
+@@||aitool-gateway-cn.allawntech.com^
+@@||calculator-api-cn.allawntech.com^
+@@||translate-service-cn.allawntech.com^
+@@||odin-inference-cn.allawntech.com^
+@@||tel-num-cn.heytapmobi.com^
+
+## vivo 部分放行
+@@||connectivitycheck.vivo.com.cn^
+
+#============================白名单结束===========================
+
 ## 电视广告相关？
 /(huan|gitv)\.tv$/
 ||mymlsoft.com^
