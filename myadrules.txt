@@ -136,7 +136,7 @@
 /^e\.so\./
 /.(heytap|oneplus|oppo|realme)mob(i|ile)\./
 /1rtb\.(com|net)/
-/51\.la/
+||51.la^
 /52qumao\.com/
 /8le8le\.com/
 /ad(b|u)kwai/
@@ -148,6 +148,7 @@
 /applk\.cn/
 /appsad\.c/
 /bayescom\.com/
+/bdcgslb\.com/
 /chengzijianzhana.com/
 /cloooud\.com/
 /cnzz\./
