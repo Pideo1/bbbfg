@@ -31,19 +31,23 @@
 
 #============================白名单结束===========================
 
-## 电视广告相关？
+# b站 pcdn，有一个新的域名
+||edge.mountaintoys.cn^
+/mcdn\.bilivide/
+
+## 电视广告
 /(huan|gitv)\.tv$/
 ||mymlsoft.com^
 ||z.cjjd14.com^
 ||comfylink.com^
 
-## 让我联想一下
+## 联想
 /hao\.lenovo/
 /sams\.lenovo/
 /tbcloud\-test\.lenovo/
 /lenovows/
 
-## 乐播没母
+## 乐播
 ||ap-guangzhou.cls.tencentcs.com^
 /\.cibn\./
 /\.cibntv\./
@@ -66,8 +70,10 @@
 ||46662.top^
 ||gracebaek.com^
 ||iphone.ior.lat^
-/^[a-zA-Z0-9]{4}\.top$/
 /shbkzkk\.cn/
+
+# 有万达广场附近的吗
+/^[a-zA-Z0-9]{4}\.top$/
 
 ## 云控
 /.*(sec|set|sys|browser|upda|inf).*miui\.c.*/
