@@ -2,7 +2,7 @@
 # Title: cccc's rules
 # Description: Personal Rules, Aggressive strategy, use with caution
 # 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
-# Update: 2026年 08月 12日 星期三 16:17:18 HKT
+# Update: 2026年 09月 12日 星期六 19:17:18 HKT
 
 #============================白名单开始===========================
 ## 南方基金
@@ -113,12 +113,20 @@
 /^stats.*/
 /^tracking\./
 /^track\./
-
+/metricslinks\.c/
 # 广告域名部分匹配
 /(^|\.|\-)(ad|admobile|adnet|ads|adscope|adsdk|adstrategy|adv|adx|beizi|click|iad|log|logs|lydaas|lydass|metrics|metric|pcdn|p2p|telemetry)(\.|$|\-)/
 /^adser.*/
 /advert/
 
+# 第三方广告公司
+
+##杭州早范传媒
+||hzzfcm.com^
+##章鱼移动
+||zhangyuyidong.cn^
+##上海领页
+||shanghailingye.cn^
 # oppo
 ||realmebbs.com^
 ||finzfin.com^
