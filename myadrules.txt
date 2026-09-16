@@ -127,6 +127,9 @@
 ||zhangyuyidong.cn^
 ##上海领页
 ||shanghailingye.cn^
+## 快手
+||open.kuaishou.cn^
+
 # oppo
 ||realmebbs.com^
 ||finzfin.com^
@@ -192,6 +195,7 @@
 /mob\.c(o|om|n)/
 /oceanengine\.c(om|n)/
 /oneway\.mobi/
+
 /opstatistics\./
 /qchannel0/
 /qidianad\.c/
@@ -206,12 +210,15 @@
 /umeng/
 /umtrack[0-2]\./
 /unityads/
+/^update\./
 /vlion\.c(om|n)/
 /wanyol\.c/
 /wrating\.com$/
 /wuchuyun\./
-/xdplt\.com$/
+/xdplt\.com/
+/xdrtc\.com/
 /xinduoad\.com/
+/xxpkg\.c/
 /ydycdn\./
 /yingt\.fun/
 /yksdks\.c(om|n)/
