@@ -93,6 +93,27 @@
 ||tanx.com^
 ||shunchangzhixing.com^
 ||66mobi.com^
+###百度
+/^mobads.*/
+||cpu-openapi.baidu.com^
+||aden.baidu.com^
+||pms-zeus-xcdn.baidu.com^
+###华为云opensdk，可能与推送相关
+/^data\-dr.*\.push.dbankcloud\.com/
+###华为云opensdk分析
+/metrics.*\.(data|dt)\.(hi|dbank)cloud\.(ru|com|cn)/
+###快手
+/w[12]\.(k|g)skwai\.com/
+/(api|open)\.e\.kuaishou/
+/(ulog\-sdk|zt)\.(gifshow|ksapisrv)\.com/
+/api\.(kuaishou|kwai)zt\.com/
+### 杭州早范传媒
+||hzzfcm.com^
+### 章鱼移动
+||zhangyuyidong.cn^
+### 上海领页
+||shanghailingye.cn^
+
 
 # 纯正则表达式，比较激进
 ## 顶级域名后缀屏蔽
@@ -115,18 +136,10 @@
 /^track\./
 /metricslinks\.c/
 # 广告域名部分匹配
-/(^|\.|\-)(ad|admobile|adnet|ads|adscope|adsdk|adstrategy|adv|adx|beizi|click|iad|log|logs|lydaas|lydass|metrics|metric|pcdn|p2p|telemetry)(\.|$|\-)/
+/(^|\.|\-)(ad|admobile|adnet|ads|adscope|adsdk|adstrategy|adv|adx|beizi|click|iad|log|logs|lydaas|lydass|metrics|metric|mobads|pcdn|p2p|telemetry)(\.|$|\-)/
 /^adser.*/
 /advert/
 
-# 第三方广告公司
-
-##杭州早范传媒
-||hzzfcm.com^
-##章鱼移动
-||zhangyuyidong.cn^
-##上海领页
-||shanghailingye.cn^
 ## 快手
 ||open.kuaishou.cn^
 
