@@ -2,7 +2,7 @@
 # Title: cccc's rules
 # Description: Personal Rules, Aggressive strategy, use with caution
 # 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
-# Update: 2026年 09月 12日 星期六 19:17:18 HKT
+# Update: Sat Sep 19 10:25:16 SG SGT 2026
 
 #============================白名单开始===========================
 ## 南方基金
@@ -15,16 +15,20 @@
 ## 网易游戏更新
 @@||update.netease.com^
 
-## oppo 部分放行，放行原因就是域名字面意思（相册的ai编辑功能、天气服务、日历节假日、录音软件里的ai工具、计算器软件等）
+## oppo 部分放行，放行原因就是域名字面意思（相册的ai编辑功能、天气服务、日历节假日、录音软件里的ai工具、计算器汇率/房贷等计算、电话识别等）
 @@||realme-ai-cn.allawntech.com^
 @@||weather-api-cn.allawntech.com^
 @@||weather-server.allawntech.com^
+@@||weather-server-gl.allawntech.com^
 @@||calendar-ext-cn.allawntech.com^
 @@||aitool-gateway-cn.allawntech.com^
 @@||calculator-api-cn.allawntech.com^
 @@||translate-service-cn.allawntech.com^
 @@||odin-inference-cn.allawntech.com^
 @@||tel-num-cn.heytapmobi.com^
+@@||odin-deployment-cn.wanyol.com^
+@@||aitool-cuiocr-cn.heytapmobi.com^
+@@||aitool-curocr-cn.wanyol.com^
 
 ## vivo 部分放行
 @@||connectivitycheck.vivo.com.cn^
@@ -32,8 +36,8 @@
 #============================白名单结束===========================
 
 # b站 pcdn，有一个新的域名
-||edge.mountaintoys.cn^
-/mcdn\.bilivide/
+||mountaintoys.cn^
+/mcdn\.bilivideo/
 
 ## 电视广告
 /(huan|gitv)\.tv$/
