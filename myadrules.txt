@@ -97,6 +97,8 @@
 ||tanx.com^
 ||shunchangzhixing.com^
 ||66mobi.com^
+/(adgain|datads)\.cn/
+
 ###百度
 /^mobads.*/
 ||cpu-openapi.baidu.com^
