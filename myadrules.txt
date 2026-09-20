@@ -1,10 +1,10 @@
 [Adblock Plus 2.0]
 # Title: cccc's rules
-# Description: Personal Rules, Aggressive strategy, use with caution
-# 个人广告过滤规则，当作 Github.com/Cats-Team/AdRules的补充，只适用于 AdGuardHome
-# Update: Sat Sep 19 10:25:16 SG SGT 2026
+# Description: 个人规则,激进策略,谨慎使用
+# 个人广告过滤规则，当作 Cats-Team/AdRules的补充，只适用于 AdGuardHome、AdGuard客户端
+# Update: Sun Sep 20 21:00:55 AWST 2026
 
-#============================白名单开始===========================
+#============================白名单开始============================
 ## 南方基金
 @@||h5no1.com^
 @@||sysdk.cl2009.com^
@@ -15,6 +15,7 @@
 ## 网易游戏更新
 @@||update.netease.com^
 
+## 给其余手机厂商用户的提醒：如果条件允许，请针对自己的手机品牌采用白名单式过滤，而非黑名单式过滤
 ## oppo 部分放行，放行原因就是域名字面意思（相册的ai编辑功能、天气服务、日历节假日、录音软件里的ai工具、计算器汇率/房贷等计算、电话识别等）
 @@||realme-ai-cn.allawntech.com^
 @@||weather-api-cn.allawntech.com^
@@ -33,13 +34,14 @@
 ## vivo 部分放行
 @@||connectivitycheck.vivo.com.cn^
 
-#============================白名单结束===========================
+#============================白名单结束============================
 
-# b站 pcdn，有一个新的域名
+#============================黑名单开始============================
+# b站 pcdn
 ||mountaintoys.cn^
 /mcdn\.bilivideo/
 
-## 电视广告
+## 长虹电视广告
 /(huan|gitv)\.tv$/
 ||mymlsoft.com^
 ||z.cjjd14.com^
@@ -86,7 +88,6 @@
 /stsdk\.vivo/
 
 ## 反诈
-@@||beian.miit.gov.cn^
 /(miit\.gov|mps\.gov|gjfzpt)\.cn$/
 
 # 下面这条是之前机圈很火的盗号 zygisk.apk 病毒请求域名
@@ -113,6 +114,7 @@
 /(api|open)\.e\.kuaishou/
 /(ulog\-sdk|zt)\.(gifshow|ksapisrv)\.com/
 /api\.(kuaishou|kwai)zt\.com/
+||open.kuaishou.cn^
 ### 杭州早范传媒
 ||hzzfcm.com^
 ### 章鱼移动
@@ -121,7 +123,7 @@
 ||shanghailingye.cn^
 
 
-# 纯正则表达式，比较激进
+# 纯正则表达式，比较激进，误杀概率高
 ## 顶级域名后缀屏蔽
 /\.bid$/
 /\.biz$/
@@ -130,24 +132,19 @@
 /\.promo$/
 /\.br$/
 
-# 国产浏览器黑名单请求域名
+# 国产浏览器黑名单请求域名，vivo、华为
 /browser(conf|r|cfg)\./
 
 # 遥测、日志、分析
-/^logs/
-/^logger/
+/^log(s|ger)/
 /analytic/
 /^stats.*/
-/^tracking\./
-/^track\./
+/^trac(king|k)\./
 /metricslinks\.c/
 # 广告域名部分匹配
 /(^|\.|\-)(ad|admobile|adnet|ads|adscope|adsdk|adstrategy|adv|adx|beizi|click|iad|log|logs|lydaas|lydass|metrics|metric|mobads|pcdn|p2p|telemetry)(\.|$|\-)/
 /^adser.*/
 /advert/
-
-## 快手
-||open.kuaishou.cn^
 
 # oppo
 ||realmebbs.com^
@@ -162,15 +159,13 @@
 /realme\./
 /oppo(coloros|mobile|pay|shop|work|color|er|digital)\./
 /allawn(fs|o|os|tech)\./
-/(oneplus|realme)mobile\./
+/.(heytap|oneplus|oppo|realme)mob(i|ile)\./
 ||opstatics.com^
 /oneplus\./
 ||nearme.com.cn^
 
-
-# 其他
+# 其他，懒得归类了
 /^e\.so\./
-/.(heytap|oneplus|oppo|realme)mob(i|ile)\./
 /1rtb\.(com|net)/
 ||51.la^
 /52qumao\.com/
@@ -188,7 +183,6 @@
 /chengzijianzhana.com/
 /cloooud\.com/
 /cnzz\./
-/coloros.com/
 /ctjpqg\.cn/
 /domobcdn\.com/
 /fanglinad\.c/
@@ -196,7 +190,6 @@
 /gameley\.com/
 /getui/
 /gridsumdissector\.c(om|n)/
-/heytap/
 /hubcloud\.com\.cn/
 /igexin/
 /imageads/
@@ -244,93 +237,10 @@
 /z74d\.com/
 /zztfly\.com/
 
-
 ## 字节跳动
 ||i.snssdk.com^
 ||sf3-ttcdn-tos.pstatp.com^
 /chengzijianzhan\.com|www\.toutiaopages\.com/
 ||im-open.douyin.com^
 
-## i法轮 人士
-/falun/
-/minghui/
-/epochtimes/
-/ntdtv/
-/voachinese/
-/appledaily/
-/nextdigital/
-/dalailama/
-/nytimes/
-/bloomberg/
-/independent/
-/freetibet/
-/citizenpowerfor/
-||rfa.org^
-||theinitium.com^
-||tibet.net^
-||jw.org^
-/bannedbook/
-||dw.com^
-||storm.mg^
-||yam.com^
-/chinadigitaltimes/
-||ltn.com.tw^
-||mpweekly.com^
-||cup.com.hk^
-||thenewslens.com^
-||inside.com.tw^
-||everylittled.com^
-||cool3c.com^
-||taketla.zaiko.io^
-||news.agentm.tw^
-||sportsv.net^
-||research.tnlmedia.com^
-||ad2iction.com^
-||tnlmedia.com^
-||becomingaces.com^
-||pincong.rocks^
-||flipboard.com^
-||soundofhope.org^
-||wenxuecity.com^
-||aboluowang.com^
-||2047.name^
-||shenyunperformingarts.org^
-||cirosantilli^
-||wsj.com^
-||rfi.fr^
-||chinapress.com.my^
-||hancel.org^
-||miraheze.org^
-||zhuichaguoji.org^
-||fawanghuihui.org^
-||hopto.org^
-||amnesty.org^
-||hrw.org^
-||irmct.org^
-||zhengjian.org
-/wujieliulan/
-/dongtaiwang/
-||ultrasurf.us^
-||yibaochina.com^
-||roc-taiwan.org^
-||creaders.net^
-||upmedia.mg^
-||ydn.com.tw^
-||udn.com^
-||theaustralian.com.au^
-||rfa.org^
-||voacantonese.com^
-||voanews.com^
-||bitterwinter.org^
-||christianstudy.com^
-||usembassy-china.org.cn^
-||qi-gong.me^
-||zhengwunet.org^
-||modernchinastudies.org^
-||ninecommentaries.com^
-||dafahao.com^
-||shenyuncreations.com^
-||tgcchinese.org^
-||botanwang.com^
-||freedomhouse.org^
-||abc.net.au^
+#============================黑名单结束============================
