@@ -41,6 +41,9 @@
 ||mountaintoys.cn^
 /mcdn\.bilivideo/
 
+# 抖音pcdn
+/free-lbv\d{1,2}\.idouyinvod\.com/
+
 ## 长虹电视广告
 /(huan|gitv)\.tv$/
 ||mymlsoft.com^
