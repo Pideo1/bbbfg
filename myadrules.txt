@@ -44,6 +44,24 @@
 
 #============================白名单结束============================
 
+# oppo
+||realmebbs.com^
+||finzfin.com^
+||ioppo.net^
+||myoppo.com^
+||oneplusbbs.com^
+||opdwz.cn^
+/oppo\./
+/coloros\./
+/heytap/
+/realme\./
+/oppo(coloros|mobile|pay|shop|work|color|er|digital)\./
+/allawn(fs|o|os|tech)\./
+/.(heytap|oneplus|oppo|realme)mob(i|ile)\./
+||opstatics.com^
+/oneplus\./
+||nearme.com.cn^
+
 #============================黑名单开始============================
 # b站 pcdn
 ||mountaintoys.cn^
@@ -156,24 +174,10 @@
 /(^|\.|\-)(ad|admobile|adnet|ads|adscope|adsdk|adstrategy|adv|adx|beizi|click|iad|log|logs|lydaas|lydass|metrics|metric|mobads|pcdn|p2p|telemetry)(\.|$|\-)/
 /^adser.*/
 /advert/
+||dm.wo.com.cn^
+||dmp.wo.com.cn^
+||gateway-papa.cloud.weizhi.com^
 
-# oppo
-||realmebbs.com^
-||finzfin.com^
-||ioppo.net^
-||myoppo.com^
-||oneplusbbs.com^
-||opdwz.cn^
-/oppo\./
-/coloros\./
-/heytap/
-/realme\./
-/oppo(coloros|mobile|pay|shop|work|color|er|digital)\./
-/allawn(fs|o|os|tech)\./
-/.(heytap|oneplus|oppo|realme)mob(i|ile)\./
-||opstatics.com^
-/oneplus\./
-||nearme.com.cn^
 
 # 其他，懒得归类了
 /^e\.so\./
